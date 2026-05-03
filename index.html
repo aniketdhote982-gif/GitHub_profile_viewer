@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ab3e3ce600.js" crossorigin="anonymous"></script>
+    <title>Github Profile Searcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+      <div class="top">
+
+        <div class="main">
+            <i class="icon fa-brands fa-github-alt"></i>
+
+            <h1>Github Profile Viewer</h1>
+        </div>
+ 
+            <p>Discover GitHub users and their profiles</p>
+
+      </div>
+
+      <div class="search-bar">
+
+            <i class=" search-icon fa-brands fa-searchengin"></i>
+            <input type="text" class="searchInput" id="search-input" placeholder="Enter GitHub username...">
+            <button id="search-button" class="search-btn">search</button>
+
+      </div>
+
+      <div class="loading" id="Loading">
+
+        <div class="spinner"></div>
+        <p>Fetching GitHub profile...</p>
+
+      </div>
+
+      <div class="error" id="Error">
+        <h3>User not found</h3>
+        <p>The Github user does not exist or the profile is private. Please check the username and try again.</p>
+      </div>
+
+      <div class="profile-card" id="profile_card">
+
+            <div class="profile-header">
+                 <img class="profile-avatar" id = "avatar" alt="profile Avatar">
+
+                 <div class="profile-info">
+                    <h2 class="profile-name" id="name"></h2>
+                   <div class="profile-username" id="username"></div> 
+                   <div class="profile-bio" id="bio"></div> 
+                   <div class="profile-location" id = "locationContainer" style="display: none;">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="location"></span>
+                   </div>
+                 </div>
+            </div>
+       
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="repos">0</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="followers">0</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="following">0</div>
+                    <div class="stat-label">Following</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="gists">0</div>
+                    <div class="stat-label">Gists</div>
+                </div>
+            </div>
+
+            <div class="profile-links">
+                <a href="#" class="profile-link" id="profileLink" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    View on GitHub
+                </a>
+
+                 <a href="#" class="profile-link" id="blogLink" target="_blank" style="display: none;">
+                    <i class="fa-brands fa-square-github"></i>
+                    Visit Blog
+                </a>
+            </div>
+      </div>
+
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+      <div style="display:flex; justify-content:center; margin-top:20px;">
+        <lottie-player 
+            src="https://assets10.lottiefiles.com/packages/lf20_qp1q7mct.json" 
+            background="transparent" 
+            speed="0.5" 
+            style="width: 420px; height: 420px;" 
+            loop 
+            autoplay>
+        </lottie-player>
+      </div>
+
+    </div>
+    
+<script src="index.js"></script>
+</body>
+</html>
